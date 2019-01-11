@@ -1,0 +1,12 @@
+.\objects\cmd_module.o: cmd_module.c
+.\objects\cmd_module.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\cmd_module.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\cmd_module.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\cmd_module.o: general.h
+.\objects\cmd_module.o: cmd_module.h
+.\objects\cmd_module.o: HAL.h
+.\objects\cmd_module.o: errorHandler.h
+.\objects\cmd_module.o: CRC_calc.h
+.\objects\cmd_module.o: list.h
+.\objects\cmd_module.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\cmd_module.o: arrayList.h
