@@ -4,23 +4,25 @@
 #include "TI_Lib.h"
 #include "tft.h"
 #include "general.h"
-#include "TempSensor.h"
-#include "errorHandler.h"
+#include "temperature.h"
+#include "errorHandling.h"
 #include "output.h"
 
 // ---------------- Functionen ---------------
 static void initROMList(int * anzahlS, int maxList,tempSensor SensorList[maxList]);
 
 int main(void) {
-	Init_TI_Board(); 
+	
+	// Initialisierungen
+	Init_TI_Board();
 	initTemp();
 	int maxList = 15;
 	int anzahlS = 0;
 	tempSensor SensorList[maxList];
-	
 	initROMList(&anzahlS, maxList, SensorList);
 	initTempOutput();
-	while (1) { // SuperLoop
+	
+	while (1) { // super loop
 		
 		while(anzahlS == 0){			
 			initROMList(&anzahlS, maxList, SensorList);		
@@ -33,19 +35,14 @@ int main(void) {
 		}
 		
 
-		// --- Messungen Durchführen --
-		
-			// Alle sensoren eine Messung ausführen lassen
+		// Durchfuehren der Temperaturmessungen (alle Sensoren gleichzeitig)
 		int err = TempMeasureAll();
-		if(err){errorHandler(err);}
-		
-		
-		
-		
-		
+		if(err) {
+			errorHandler(err);
+		}
+
 		for (int i = 0; i < anzahlS; i++) {
-			
-			// Scratchpads auslesen
+			// Auslesen der Scratchpads
 			int err = TempReadTemp(&(SensorList[i]));			
 			if (err) {
 				// Im Fehlerfall liste zurücksetzen und Roms erneut detecten
@@ -56,14 +53,9 @@ int main(void) {
 				break;
 			}			
 			
-			// Messungen Ausgeben
+			// Ausgabe der gemessenen Temperaturen
 			printTemp(SensorList[i], i+1);
 		}	
-		
-
-				
-		
-
 	}
 }
 
@@ -83,10 +75,10 @@ static void initROMList(int * anzahlS, int maxList, tempSensor SensorList[maxLis
 	}
 
 	TFT_cursor_off();
-	//TFT_set_font_color(GREEN);
+	TFT_set_font_color(WHITE);
 	TFT_gotoxy(1,1);	
 	TFT_puts("ROMs: ");
-
+	
 	for(int i = 0; i < *anzahlS; i++){
 		printROM(SensorList[i], i+1);
 	}

@@ -3,7 +3,7 @@
 #include "TI_Lib.h"
 #include "tft.h"
 #include "general.h"
-#include "TempSensor.h"
+#include "temperature.h"
 
 #define TEMPYOFFSET 1
 #define TEMPXOFFSET 22

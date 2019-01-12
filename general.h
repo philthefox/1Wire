@@ -28,12 +28,12 @@ typedef struct ROMNUM{
 }ROM;
 
 typedef struct  __attribute__((__packed__)) SCRATCHPAD{
-WORD Temp;
-BYTE ThUsrByte;
-BYTE TlUsrByte;
-BYTE configR;
-BYTE reserved[3];
-BYTE crc;
+	WORD Temp;
+	BYTE ThUsrByte;
+	BYTE TlUsrByte;
+	BYTE configR;
+	BYTE reserved[3];
+	BYTE crc;
 }ScratchPad;
 
 
@@ -49,23 +49,16 @@ BYTE crc;
 #define INPUT_MODE 0x00
 #define OUTPUT_MODE 0x01
 
-
 #define ODrain 1
 #define PP 0
 
-//-------------------------- Temp Sensor Commands (DS18B20) --------------------
-#define CMD_READ_SCRATCH 0xBE
-#define CMD_READ_ROM 0x33
-
-#define CMD_MATCH_ROM 0x55
-#define CMD_SEARCH_ROM 0xF0
-
-#define CMD_SEND_CONVERT 0x44
-
-#define CMD_SKIP_ROM 0xCC
-
-
-
+// sensor commands
+#define READ_SCRATCH 0xBE
+#define READ_ROM 0x33
+#define MATCH_ROM 0x55
+#define SEARCH_ROM 0xF0
+#define SEND_CONVERT 0x44
+#define SKIP_ROM 0xCC
 
 #endif /* HEADER_GENERAL_H_ */
 

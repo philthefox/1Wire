@@ -4,7 +4,7 @@
  */
 
  #include "list.h"
- #include "ErrorHandler.h"
+ #include "errorHandling.h"
 
 /*
  * Initializes a new list

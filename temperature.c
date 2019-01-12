@@ -8,9 +8,9 @@
 #include <stdint.h>
 #include <math.h>
 #include "general.h"
-#include "TempSensor.h"
-#include "cmd_module.h"
-#include "errorHandler.h"
+#include "temperature.h"
+#include "hardwareController.h"
+#include "errorHandling.h"
 
 
 
@@ -25,7 +25,7 @@ static double tempToDouble(WORD temp);
 //-----------------------------------------
 
 void initTemp(void){
-	initCMD();
+	initHardwareController();
 }
 
 
@@ -47,7 +47,7 @@ int TempAutoDetect(int arraySize, tempSensor sensorList[arraySize], int *anzahlS
 	int elementCounter = 0;
 
 	// Detect
-	int err = CMDautoDetectROMS(arraySize, romList, &elementCounter);
+	int err = detectSensors(arraySize, romList, &elementCounter);
 	if(err){return err;}
 
 	*anzahlS = elementCounter;
@@ -64,10 +64,10 @@ int TempAutoDetect(int arraySize, tempSensor sensorList[arraySize], int *anzahlS
 * Führt eine Temperturmessung auf dem Angegebenen Sensor aus, und schreibt die Temperatur in den Sensor
 **/
 int TempMeasure(tempSensor *sensor){
-	int err = CMDselectSlave(sensor->ROMCode);
+	int err = selectSlave(sensor->ROMCode);
 	if(err){return err;}
 
-	CMDmeasure();
+	measure();
 	
 	err = TempReadTemp(sensor);
 	if(err){return err;}
@@ -91,10 +91,12 @@ ROM getEmptyROM(void){
 * Lässt alle Sensoren gleichzeitig eine Messung durchführen
 **/
 int TempMeasureAll(void){
-	int err = CMDreset();
-	if(err){return err;}
-	CMDskipRom();
-	CMDmeasure();
+	int err = resetHardware();
+	if(err) {
+		return err;
+	}
+	skipRom();
+	measure();
 	return 0;
 }
 
@@ -109,14 +111,14 @@ int TempReadTemp(tempSensor *sensor){
 	
 	do{
 		
-	int err = CMDreset();
+	int err = resetHardware();
 	if(err){return err;}
 
-	err = CMDselectSlave(sensor->ROMCode);
+	err = selectSlave(sensor->ROMCode);
 	if(err){return err;}
 	
 
-	readError = CMDreadScratch(&sPad);
+	readError = readScratch(&sPad);
 	if(readError == INVALIDCRC){retry = 1; numberOfTries--;}
 
 }while( retry == 1 && numberOfTries >= 0);

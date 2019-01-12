@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "general.h"
-#include "CRC_calc.h"
+#include "crc.h"
 
 
 

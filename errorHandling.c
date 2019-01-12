@@ -9,8 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "errorHandler.h"
-#include "TFT.h"
+#include "errorHandling.h"
+#include "tft.h"
 
 
 void errorHandler(int ErrorNumber){

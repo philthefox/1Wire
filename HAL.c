@@ -4,8 +4,8 @@
 #include "TI_memory_map.h"
 #include "timer.h"
 #include "general.h"
-#include "HAL.h"
-#include "errorHandler.h"
+#include "hal.h"
+#include "errorHandling.h"
 
 static void setPin(int state, int pin);
 static void setRW_pin(int read, int pin);

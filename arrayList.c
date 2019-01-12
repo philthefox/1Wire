@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "general.h"
-#include "TempSensor.h"
+#include "temperature.h"
 #include "arrayList.h"
 #define maxSize 20
 
