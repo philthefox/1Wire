@@ -651,7 +651,7 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>startTime,0x0A</ItemText>
+          <ItemText>count</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
@@ -666,7 +666,7 @@
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>romCode</ItemText>
+          <ItemText>rom</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

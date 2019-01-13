@@ -19,16 +19,19 @@ typedef int32_t BOOL;
 typedef uint8_t BYTE;
 typedef uint16_t WORD;
 
-//---------------------------Structs -----------------------
-
 typedef struct ROMNUM{
-	BYTE FamilyCode;
-	BYTE Serialnumber[6];
+	BYTE familyCode;
+	BYTE serialNumber[6];
 	BYTE crc;
 }ROM;
 
+typedef struct SENSOR {
+	ROM rom;
+	double temperature;
+} Sensor;
+
 typedef struct  __attribute__((__packed__)) SCRATCHPAD{
-	WORD Temp;
+	WORD temperature;
 	BYTE ThUsrByte;
 	BYTE TlUsrByte;
 	BYTE configR;

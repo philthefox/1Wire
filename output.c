@@ -11,7 +11,7 @@
 /**
 * Initialisiert die Temperaturausgabe 
 **/
-void initTempOutput(void) {
+void initTemperatureOutput(void) {
 	//TFT_set_font_color(GREEN);
 	TFT_gotoxy(TEMPXOFFSET,TEMPYOFFSET);
 	TFT_puts("Sensor Temps:");
@@ -20,10 +20,10 @@ void initTempOutput(void) {
 /**
 * Gibt einen Temperatur wert an der richtigen stelle auf dem Display aus
 **/ 
-void printTemp(tempSensor sensor, int nr) {
+void printTemperatures(Sensor sensor, int nr) {
 	char stringBuff[20];
 	//TFT_set_font_color(GREEN);
-	snprintf(stringBuff, 20, "%d: %.3f Grad C",nr, sensor.measuredTemp);
+	snprintf(stringBuff, 20, "%d: %.3f Grad C",nr, sensor.temperature);
 	TFT_gotoxy(TEMPXOFFSET,TEMPYOFFSET+nr);
 	TFT_puts(stringBuff);
 }
@@ -31,8 +31,8 @@ void printTemp(tempSensor sensor, int nr) {
 /**
 * Gibt den Rom Code des Sensor auf dem Display aus
 **/
-void printROM(tempSensor sensor, int nr) {
+void printROMs(Sensor sensor, int nr) {
 	char strBuff[100];
-	snprintf(strBuff, sizeof(strBuff), "\n\r%d: %llx", nr, *((unsigned long long *) &(sensor.ROMCode)));
+	snprintf(strBuff, sizeof(strBuff), "\n\r%d: %llx", nr, *((unsigned long long *) &(sensor.rom)));
 	TFT_puts(strBuff);
 }
