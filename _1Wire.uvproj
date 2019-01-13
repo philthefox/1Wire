@@ -974,11 +974,6 @@
           <GroupName>HEADER</GroupName>
           <Files>
             <File>
-              <FileName>arrayList.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\arrayList.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
@@ -1946,11 +1941,6 @@
           <GroupName>HEADER</GroupName>
           <Files>
             <File>
-              <FileName>arrayList.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\arrayList.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
@@ -2889,11 +2879,6 @@
           <GroupName>HEADER</GroupName>
           <Files>
             <File>
-              <FileName>arrayList.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\arrayList.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
@@ -3792,11 +3777,6 @@
         <Group>
           <GroupName>HEADER</GroupName>
           <Files>
-            <File>
-              <FileName>arrayList.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\arrayList.h</FilePath>
-            </File>
             <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>

@@ -1,6 +1,3 @@
-/*
- * TempSensor.h
- */
 
 #ifndef HEADER_TEMPSENSOR_H_
 #define HEADER_TEMPSENSOR_H_

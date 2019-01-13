@@ -74,14 +74,14 @@ int measure() {
 	writeByte(SEND_CONVERT);
 
 	// push pull mode setzen
-	DSetMode(PUSH_PULL);
-	setDPin(1);
+	setPinMode(PUSH_PULL, DATA_PIN);
+	setPin(1, DATA_PIN);
 
 	wait(750000);
 
 	// open drain mode setzen
-	DSetMode(OPEN_DRAIN);
-	setDPin(1);
+	setPinMode(OPEN_DRAIN, DATA_PIN);
+	setPin(1, DATA_PIN);
 	return 0;
 }
 /**

@@ -1,9 +1,3 @@
-/*
- * general.h
- *
- *  Created on: 26.11.2018
- *      Author: Linus
- */
 
 #ifndef HEADER_GENERAL_H_
 #define HEADER_GENERAL_H_
@@ -41,7 +35,14 @@ typedef struct  __attribute__((__packed__)) SCRATCHPAD{
 
 // errors
 #define EOK			0
-
+#define ILLEGALARGUMENT 1
+#define ARRAYINDEXOUTOFBOUNDS 2
+#define ILLEGALSTATE 3
+#define NULLPOINTER 4
+#define NOSENSOR 5
+#define UNKNOWNERROR 6
+#define ROMREADERROR 7
+#define INVALIDCRC 8
 
 // hal
 #define BUS_PORT GPIOG
@@ -49,8 +50,8 @@ typedef struct  __attribute__((__packed__)) SCRATCHPAD{
 #define DATA_PIN 0
 #define POWER_PIN 1
 
-#define SET_REG BSRRL
-#define RESET_REG BSRRH
+//#define SET_REG BSRRL
+//#define RESET_REG BSRRH
 
 #define INPUT_MODE 0x00
 #define OUTPUT_MODE 0x01
