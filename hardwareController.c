@@ -7,7 +7,6 @@
 #include "hal.h"
 #include "errorHandling.h"
 #include "crc.h"
-#include "list.h"
 #include "arrayList.h"
 
 //---------------Functions----------------------
@@ -62,18 +61,17 @@ int readROM(ROM *readRom) {
 * Messung durchfuehren
 **/
 int measure() {
-	// Send convert
+	// send convert command senden
 	writeByte(SEND_CONVERT);
 
-	//Set to Push pull mode
-	DSetMode(PP);
+	// push pull mode setzen
+	DSetMode(PUSH_PULL);
 	setDPin(1);
 
-	// wait for measurement
 	wait(750000);
 
-	//Set Mode Back to OpenDrain
-	DSetMode(ODrain);
+	// open drain mode setzen
+	DSetMode(OPEN_DRAIN);
 	setDPin(1);
 	return 0;
 }

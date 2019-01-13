@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\_1Wire.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\_1Wire.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat Jan 12 14:31:30 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sun Jan 13 11:19:44 2019
 <BR><P>
 <H3>Maximum Stack Usage =        368 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -930,10 +930,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_send_data
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTemp
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTemp
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initTempOutput
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
 </UL>
 
 <P><STRONG><a name="[97]"></a>TFT_putc</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, tft.o(i.TFT_putc))
@@ -950,11 +950,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_send_data
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTemp
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTemp
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printROM
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initTempOutput
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
 </UL>
 
 <P><STRONG><a name="[99]"></a>TFT_send_data</STRONG> (Thumb, 230 bytes, Stack size 20 bytes, tft.o(i.TFT_send_data))
@@ -1226,16 +1226,16 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 368 + Unknown Stack Size
 <LI>Call Chain = main &rArr; initROMList &rArr; TempAutoDetect &rArr; detectSensors &rArr; detectSensorsRecursively &rArr;  detectSensorsRecursively (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTemp
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initTempOutput
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_TI_Board
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_cls
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initTemp
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TempReadTemp
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TempMeasureAll
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTemp
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initTempOutput
 </UL>
 <BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -1713,15 +1713,15 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 352 + Unknown Stack Size
 <LI>Call Chain = initROMList &rArr; TempAutoDetect &rArr; detectSensors &rArr; detectSensorsRecursively &rArr;  detectSensorsRecursively (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printROM
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getEmptyROM
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_puts
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_gotoxy
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_set_font_color
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_cursor_off
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;errorHandler
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TempNewInstance
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TempAutoDetect
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printROM
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>

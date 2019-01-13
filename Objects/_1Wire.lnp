@@ -11,7 +11,6 @@
 ".\objects\getline.o"
 ".\objects\sim_board_io.o"
 ".\objects\arraylist.o"
-".\objects\list.o"
 ".\objects\output.o"
 ".\objects\main.o"
 ".\objects\hardwarecontroller.o"

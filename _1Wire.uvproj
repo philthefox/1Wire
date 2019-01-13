@@ -863,41 +863,6 @@
               <FilePath>.\arrayList.c</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\cmd_module.c</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CRC_calc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ErrorHandler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ErrorHandler.c</FilePath>
-            </File>
-            <File>
-              <FileName>HAL.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\HAL.c</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\IteratorModul.c</FilePath>
-            </File>
-            <File>
-              <FileName>list.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\list.c</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TempSensor.c</FilePath>
-            </File>
-            <File>
               <FileName>output.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\output.c</FilePath>
@@ -906,6 +871,31 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardwareController.c</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\errorHandling.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\temperature.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -989,49 +979,39 @@
               <FilePath>.\arrayList.h</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\cmd_module.h</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CRC_calc.h</FilePath>
-            </File>
-            <File>
-              <FileName>errorHandler.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\errorHandler.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
             </File>
             <File>
-              <FileName>HAL.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\HAL.h</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\IteratorModul.h</FilePath>
-            </File>
-            <File>
-              <FileName>list.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\list.h</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\TempSensor.h</FilePath>
-            </File>
-            <File>
               <FileName>output.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\crc.h</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\errorHandling.h</FilePath>
+            </File>
+            <File>
+              <FileName>hal.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardwareController.h</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\temperature.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1923,41 +1903,6 @@
               <FilePath>.\arrayList.c</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\cmd_module.c</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CRC_calc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ErrorHandler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ErrorHandler.c</FilePath>
-            </File>
-            <File>
-              <FileName>HAL.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\HAL.c</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\IteratorModul.c</FilePath>
-            </File>
-            <File>
-              <FileName>list.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\list.c</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TempSensor.c</FilePath>
-            </File>
-            <File>
               <FileName>output.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\output.c</FilePath>
@@ -1966,6 +1911,31 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardwareController.c</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\errorHandling.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\temperature.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1981,49 +1951,39 @@
               <FilePath>.\arrayList.h</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\cmd_module.h</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CRC_calc.h</FilePath>
-            </File>
-            <File>
-              <FileName>errorHandler.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\errorHandler.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
             </File>
             <File>
-              <FileName>HAL.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\HAL.h</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\IteratorModul.h</FilePath>
-            </File>
-            <File>
-              <FileName>list.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\list.h</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\TempSensor.h</FilePath>
-            </File>
-            <File>
               <FileName>output.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\crc.h</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\errorHandling.h</FilePath>
+            </File>
+            <File>
+              <FileName>hal.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardwareController.h</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\temperature.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2033,7 +1993,7 @@
       <TargetName>Simulation</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103ZC</Device>
@@ -2818,41 +2778,6 @@
               <FilePath>.\arrayList.c</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\cmd_module.c</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CRC_calc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ErrorHandler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ErrorHandler.c</FilePath>
-            </File>
-            <File>
-              <FileName>HAL.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\HAL.c</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\IteratorModul.c</FilePath>
-            </File>
-            <File>
-              <FileName>list.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\list.c</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TempSensor.c</FilePath>
-            </File>
-            <File>
               <FileName>output.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\output.c</FilePath>
@@ -2861,6 +2786,31 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardwareController.c</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\errorHandling.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\temperature.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2944,49 +2894,39 @@
               <FilePath>.\arrayList.h</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\cmd_module.h</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CRC_calc.h</FilePath>
-            </File>
-            <File>
-              <FileName>errorHandler.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\errorHandler.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
             </File>
             <File>
-              <FileName>HAL.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\HAL.h</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\IteratorModul.h</FilePath>
-            </File>
-            <File>
-              <FileName>list.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\list.h</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\TempSensor.h</FilePath>
-            </File>
-            <File>
               <FileName>output.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\crc.h</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\errorHandling.h</FilePath>
+            </File>
+            <File>
+              <FileName>hal.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardwareController.h</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\temperature.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -3810,41 +3750,6 @@
               <FilePath>.\arrayList.c</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\cmd_module.c</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CRC_calc.c</FilePath>
-            </File>
-            <File>
-              <FileName>ErrorHandler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ErrorHandler.c</FilePath>
-            </File>
-            <File>
-              <FileName>HAL.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\HAL.c</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\IteratorModul.c</FilePath>
-            </File>
-            <File>
-              <FileName>list.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\list.c</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TempSensor.c</FilePath>
-            </File>
-            <File>
               <FileName>output.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\output.c</FilePath>
@@ -3853,6 +3758,31 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardwareController.c</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\errorHandling.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\temperature.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3868,49 +3798,39 @@
               <FilePath>.\arrayList.h</FilePath>
             </File>
             <File>
-              <FileName>cmd_module.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\cmd_module.h</FilePath>
-            </File>
-            <File>
-              <FileName>CRC_calc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CRC_calc.h</FilePath>
-            </File>
-            <File>
-              <FileName>errorHandler.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\errorHandler.h</FilePath>
-            </File>
-            <File>
               <FileName>general.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\general.h</FilePath>
             </File>
             <File>
-              <FileName>HAL.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\HAL.h</FilePath>
-            </File>
-            <File>
-              <FileName>IteratorModul.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\IteratorModul.h</FilePath>
-            </File>
-            <File>
-              <FileName>list.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\list.h</FilePath>
-            </File>
-            <File>
-              <FileName>TempSensor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\TempSensor.h</FilePath>
-            </File>
-            <File>
               <FileName>output.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\crc.h</FilePath>
+            </File>
+            <File>
+              <FileName>errorHandling.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\errorHandling.h</FilePath>
+            </File>
+            <File>
+              <FileName>hal.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardwareController.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardwareController.h</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\temperature.h</FilePath>
             </File>
           </Files>
         </Group>

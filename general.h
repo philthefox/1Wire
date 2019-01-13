@@ -49,8 +49,8 @@ typedef struct  __attribute__((__packed__)) SCRATCHPAD{
 #define INPUT_MODE 0x00
 #define OUTPUT_MODE 0x01
 
-#define ODrain 1
-#define PP 0
+#define OPEN_DRAIN 1
+#define PUSH_PULL 0
 
 // sensor commands
 #define READ_SCRATCH 0xBE

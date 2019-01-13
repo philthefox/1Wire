@@ -16,12 +16,12 @@ void initHAL() {
 	timerinit();
 
 	// -- Config and Turn on POWER Pin
-	pinSetMode(PP, POWER_PIN);
+	pinSetMode(PUSH_PULL, POWER_PIN);
 	setRW_pin(0, POWER_PIN);
 	setPin(1, POWER_PIN);
 
 	// ------ Enable DATA Pin
-	DSetMode(ODrain);
+	DSetMode(OPEN_DRAIN);
 	setRW(0);
 
 	setDPin(1);	//schreibe 1
@@ -49,7 +49,7 @@ int readDuring(uint32_t usSec) {
 	}
 	
 	setRW(0);
-	//DSetMode(ODrain);	
+	//DSetMode(OPEN_DRAIN);	
 	setDPin(1);
 	int info = BUS_PORT->IDR;
 	info = info;

@@ -7,6 +7,4 @@
 .\objects\hardwarecontroller.o: hal.h
 .\objects\hardwarecontroller.o: errorHandling.h
 .\objects\hardwarecontroller.o: crc.h
-.\objects\hardwarecontroller.o: list.h
-.\objects\hardwarecontroller.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\hardwarecontroller.o: arrayList.h
