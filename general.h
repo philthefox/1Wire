@@ -36,8 +36,11 @@ typedef struct  __attribute__((__packed__)) SCRATCHPAD{
 	BYTE crc;
 }ScratchPad;
 
+// errors
+#define EOK			0
 
-//------------------------ HAL Settings -----------------
+
+// hal
 #define BUS_PORT GPIOG
 
 #define DATA_PIN 0

@@ -4,17 +4,26 @@
 #include <math.h>
 #include "general.h"
 #include "hardwareController.h"
+#include "temperature.h"
 #include "hal.h"
 #include "errorHandling.h"
 #include "crc.h"
-#include "arrayList.h"
+//#include "arrayList.h"
 
-//---------------Functions----------------------
+#define MAX_NUMBER_ROMS 10
+
+static ROM romList[MAX_NUMBER_ROMS];
+static int numberOfROMs;
+
 static void jumpToBranch(int index, uint64_t romBits);
 static void detectSensorsRecursively(int index, uint64_t romBits);
+static void initRomList(void);
+static int getNumberOfRoms(void);
+static int addRomToList(ROM rom);
+static ROM getRomFromList(int index);
 
 /**
-* Initialisiert das Modul und alle abhängigkeiten
+* Initialisierung
 **/
 void initHardwareController() {
 	initHAL();
@@ -109,18 +118,18 @@ int readScratch(ScratchPad *SpadOut) {
 * Erkennt alle angeschlossenen Sensoren und schreibt die erkannten in die Liste 
 **/
 int detectSensors(int size, ROM romList[size], int *numberOfElements) {
-	initList();
+	initRomList();
 	resetHardware();
 	writeByte(SEARCH_ROM);
 	int index = 0;
 	uint64_t romBits = 0;
 	detectSensorsRecursively(index, romBits);
 	
-	for(int i = 0; i < getCount() && i < size;i++){
-		romList[i] = getROM(i);	
+	for(int i = 0; i < getNumberOfRoms() && i < size;i++){
+		romList[i] = getRomFromList(i);	
 	}
 	
-	*numberOfElements = getCount();
+	*numberOfElements = getNumberOfRoms();
 
 	return 0;
 }
@@ -138,11 +147,11 @@ static void jumpToBranch(int index, uint64_t romBits){
 	}
 }
 
-static void detectSensorsRecursively(int index, uint64_t romBits){
+static void detectSensorsRecursively(int index, uint64_t romBits) {
 	
 	// Abbruchbedingung
 	if(index >= 64){
-		addROM(*((ROM *)(&romBits)));
+		addRomToList(*((ROM *)(&romBits)));
 		return;
 	}
 
@@ -169,6 +178,33 @@ static void detectSensorsRecursively(int index, uint64_t romBits){
 	else if ((bit == 1) && (bitKomplement == 1)) { // Fehlerfall
 		return;
 	}
+}
+
+static void initRomList() {
+	numberOfROMs = 0;
+	for (int i = 0; i < MAX_NUMBER_ROMS; i++) {
+		romList[i] = createROM();
+	}
+}
+
+static int getNumberOfRoms() {
+	return numberOfROMs;
+}
+
+static int addRomToList(ROM rom) {
+	if (numberOfROMs > MAX_NUMBER_ROMS) {
+		return -1;
+	}
+	romList[numberOfROMs] = rom;
+	numberOfROMs++;
+	return EOK;
+}
+
+static ROM getRomFromList(int index) {
+	if (index >= numberOfROMs) {
+		return createROM();
+	}
+	return romList[index];
 }
 
 

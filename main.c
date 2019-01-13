@@ -66,7 +66,7 @@ static void initROMList(int * anzahlS, int maxList, tempSensor SensorList[maxLis
 	// Init List;	
 	*anzahlS = 0;
 	for (int i = 0; i < maxList; i++) {		
-		SensorList[i] = TempNewInstance(getEmptyROM());
+		SensorList[i] = TempNewInstance(createROM());
 	}
 
 	int err = TempAutoDetect(maxList, SensorList, anzahlS);

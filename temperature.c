@@ -77,7 +77,7 @@ int TempMeasure(tempSensor *sensor){
 /**
 * Gibt eine leere instanz des Roms wieder
 **/
-ROM getEmptyROM(void){
+ROM createROM(void){
 	ROM emptyRom;
 	emptyRom.crc = 0;
 	emptyRom.FamilyCode =0;

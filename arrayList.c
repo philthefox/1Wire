@@ -12,7 +12,7 @@ static ROM romList[maxSize];
 void initList(){
 	count = 0;
 for(int i = 0; i < maxSize; i++){
-	romList[i] = getEmptyROM();
+	romList[i] = createROM();
 }
 }
 
@@ -28,11 +28,11 @@ return 0;
 
 ROM getROM(int index){
 	if(index >= count){
-	return getEmptyROM();
+	return createROM();
 	}	
 	return romList[index];
 }
 
 int getCount(){
-return count;
+	return count;
 }

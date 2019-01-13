@@ -225,11 +225,11 @@ F (.\TI_BRD_LIB\Simulation\oneWireSTIM.ini)(0x5C39D9F3)()
 F (.\TI_BRD_LIB\Simulation\rotarySIM.ini)(0x5C39D9F3)()
 F (.\TI_BRD_LIB\Simulation\timer2SIM.ini)(0x5C39D9F3)()
 F (.\TI_BRD_LIB\Simulation\userSIM.ini)(0x5C39D9F3)()
-F (.\arrayList.c)(0x5C39E063)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\arraylist.o --omf_browse .\objects\arraylist.crf --depend .\objects\arraylist.d)
+F (.\arrayList.c)(0x5C3B5F7C)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\arraylist.o --omf_browse .\objects\arraylist.crf --depend .\objects\arraylist.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
-I (general.h)(0x5C39EB75)
+I (general.h)(0x5C3B5A2F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F65B18)
-I (temperature.h)(0x5C39D9F3)
+I (temperature.h)(0x5C3B5EBC)
 I (arrayList.h)(0x5C39D9F4)
 F (.\output.c)(0x5C39E070)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\output.o --omf_browse .\objects\output.crf --depend .\objects\output.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
@@ -242,9 +242,9 @@ I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D31EA)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D31EA)
 I (C:\Keil_v5\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x559D2740)
 I (.\TI_BRD_LIB\Library\tft.h)(0x5C39D9F3)
-I (general.h)(0x5C39EB75)
-I (temperature.h)(0x5C39D9F3)
-F (.\main.c)(0x5C39E05D)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (general.h)(0x5C3B5A2F)
+I (temperature.h)(0x5C3B5EBC)
+F (.\main.c)(0x5C3B5FB9)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
 I (.\TI_BRD_LIB\Library\TI_Lib.h)(0x5C39D9F3)
 I (.\TI_BRD_LIB\Library\TI_memory_map.h)(0x5C39D9F3)
@@ -255,41 +255,41 @@ I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D31EA)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D31EA)
 I (C:\Keil_v5\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x559D2740)
 I (.\TI_BRD_LIB\Library\tft.h)(0x5C39D9F3)
-I (general.h)(0x5C39EB75)
-I (temperature.h)(0x5C39D9F3)
+I (general.h)(0x5C3B5A2F)
+I (temperature.h)(0x5C3B5EBC)
 I (errorHandling.h)(0x5C39D9F4)
 I (output.h)(0x5C39DC3C)
-F (.\hardwareController.c)(0x5C3B1082)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\hardwarecontroller.o --omf_browse .\objects\hardwarecontroller.crf --depend .\objects\hardwarecontroller.d)
+F (.\hardwareController.c)(0x5C3B5FF4)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\hardwarecontroller.o --omf_browse .\objects\hardwarecontroller.crf --depend .\objects\hardwarecontroller.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F65B16)
-I (general.h)(0x5C39EB75)
+I (general.h)(0x5C3B5A2F)
 I (hardwareController.h)(0x5C3B1041)
+I (temperature.h)(0x5C3B5EBC)
 I (hal.h)(0x5C39D9F3)
 I (errorHandling.h)(0x5C39D9F4)
 I (crc.h)(0x5C39D9F3)
-I (arrayList.h)(0x5C39D9F4)
 F (.\errorHandling.c)(0x5C39E09F)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\errorhandling.o --omf_browse .\objects\errorhandling.crf --depend .\objects\errorhandling.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F65B18)
 I (errorHandling.h)(0x5C39D9F4)
 I (.\TI_BRD_LIB\Library\tft.h)(0x5C39D9F3)
-F (.\temperature.c)(0x5C39EC2C)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\temperature.o --omf_browse .\objects\temperature.crf --depend .\objects\temperature.d)
+F (.\temperature.c)(0x5C3B5EAE)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\temperature.o --omf_browse .\objects\temperature.crf --depend .\objects\temperature.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F65B16)
-I (general.h)(0x5C39EB75)
-I (temperature.h)(0x5C39D9F3)
+I (general.h)(0x5C3B5A2F)
+I (temperature.h)(0x5C3B5EBC)
 I (hardwareController.h)(0x5C3B1041)
 I (errorHandling.h)(0x5C39D9F4)
 F (.\crc.c)(0x5C39E1A2)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\crc.o --omf_browse .\objects\crc.crf --depend .\objects\crc.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F65B18)
-I (general.h)(0x5C39EB75)
+I (general.h)(0x5C3B5A2F)
 I (crc.h)(0x5C39D9F3)
-F (.\hal.c)(0x5C39E0BB)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\hal.o --omf_browse .\objects\hal.crf --depend .\objects\hal.d)
+F (.\hal.c)(0x5C3B1128)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\TI_BRD_LIB\Library -I .\TI_BRD_LIB\Simulated_Board-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523" -DSIMULATION -DSTM32F10X_HD-o .\objects\hal.o --omf_browse .\objects\hal.crf --depend .\objects\hal.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F65B18)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F65B18)
 I (.\TI_BRD_LIB\Library\TI_Lib.h)(0x5C39D9F3)
@@ -300,14 +300,14 @@ I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D31EA)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D31EA)
 I (C:\Keil_v5\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x559D2740)
 I (.\TI_BRD_LIB\Library\timer.h)(0x5C39D9F3)
-I (general.h)(0x5C39EB75)
+I (general.h)(0x5C3B5A2F)
 I (hal.h)(0x5C39D9F3)
 I (errorHandling.h)(0x5C39D9F4)
 F (.\arrayList.h)(0x5C39D9F4)()
-F (.\general.h)(0x5C39EB75)()
+F (.\general.h)(0x5C3B5A2F)()
 F (.\output.h)(0x5C39DC3C)()
 F (.\crc.h)(0x5C39D9F3)()
 F (.\errorHandling.h)(0x5C39D9F4)()
 F (.\hal.h)(0x5C39D9F3)()
 F (.\hardwareController.h)(0x5C3B1041)()
-F (.\temperature.h)(0x5C39D9F3)()
+F (.\temperature.h)(0x5C3B5EBC)()

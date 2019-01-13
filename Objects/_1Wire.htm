@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\_1Wire.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\_1Wire.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sun Jan 13 11:19:44 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sun Jan 13 16:57:46 2019
 <BR><P>
 <H3>Maximum Stack Usage =        368 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1104,26 +1104,28 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display
 </UL>
 
-<P><STRONG><a name="[b9]"></a>addROM</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, arraylist.o(i.addROM))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = addROM
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensorsRecursively
-</UL>
-
 <P><STRONG><a name="[ce]"></a>calcCRC</STRONG> (Thumb, 34 bytes, Stack size 20 bytes, crc.o(i.calcCRC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = calcCRC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isValidCRC
 </UL>
 
+<P><STRONG><a name="[bf]"></a>createROM</STRONG> (Thumb, 42 bytes, Stack size 12 bytes, temperature.o(i.createROM))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = createROM
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initRomList
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getRomFromList
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
+</UL>
+
 <P><STRONG><a name="[9f]"></a>detectSensors</STRONG> (Thumb, 98 bytes, Stack size 48 bytes, hardwarecontroller.o(i.detectSensors))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = detectSensors &rArr; detectSensorsRecursively &rArr;  detectSensorsRecursively (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initList
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getROM
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getCount
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeByte
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeByte
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;resetHardware
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initRomList
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getRomFromList
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getNumberOfRoms
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensorsRecursively
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TempAutoDetect
@@ -1138,26 +1140,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
-</UL>
-
-<P><STRONG><a name="[b8]"></a>getCount</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, arraylist.o(i.getCount))
-<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
-</UL>
-
-<P><STRONG><a name="[bf]"></a>getEmptyROM</STRONG> (Thumb, 42 bytes, Stack size 12 bytes, temperature.o(i.getEmptyROM))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = getEmptyROM
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initList
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getROM
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initROMList
-</UL>
-
-<P><STRONG><a name="[b7]"></a>getROM</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, arraylist.o(i.getROM))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = getROM &rArr; getEmptyROM
-</UL>
-<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getEmptyROM
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
 </UL>
 
 <P><STRONG><a name="[d9]"></a>getTimeStamp</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, timer.o(i.getTimeStamp))
@@ -1187,14 +1169,6 @@ Global Symbols
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initHAL
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initTemp
-</UL>
-
-<P><STRONG><a name="[b4]"></a>initList</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, arraylist.o(i.initList))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = initList &rArr; getEmptyROM
-</UL>
-<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getEmptyROM
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
 </UL>
 
 <P><STRONG><a name="[cb]"></a>initTemp</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, temperature.o(i.initTemp))
@@ -1714,7 +1688,7 @@ Local Symbols
 <LI>Call Chain = initROMList &rArr; TempAutoDetect &rArr; detectSensors &rArr; detectSensorsRecursively &rArr;  detectSensorsRecursively (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printROM
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getEmptyROM
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;createROM
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_puts
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_gotoxy
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TFT_set_font_color
@@ -1726,19 +1700,45 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<P><STRONG><a name="[b9]"></a>addRomToList</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, hardwarecontroller.o(i.addRomToList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = addRomToList
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensorsRecursively
+</UL>
+
 <P><STRONG><a name="[b6]"></a>detectSensorsRecursively</STRONG> (Thumb, 190 bytes, Stack size 40 bytes, hardwarecontroller.o(i.detectSensorsRecursively))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184 + In Cycle
 <LI>Call Chain = detectSensorsRecursively &rArr;  detectSensorsRecursively (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addROM
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeBit
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readBit
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jumpToBranch
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensorsRecursively
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addRomToList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensorsRecursively
+</UL>
+
+<P><STRONG><a name="[b8]"></a>getNumberOfRoms</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, hardwarecontroller.o(i.getNumberOfRoms))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
+</UL>
+
+<P><STRONG><a name="[b7]"></a>getRomFromList</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, hardwarecontroller.o(i.getRomFromList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = getRomFromList &rArr; createROM
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;createROM
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
+</UL>
+
+<P><STRONG><a name="[b4]"></a>initRomList</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, hardwarecontroller.o(i.initRomList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = initRomList &rArr; createROM
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;createROM
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;detectSensors
 </UL>
 
 <P><STRONG><a name="[bd]"></a>jumpToBranch</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, hardwarecontroller.o(i.jumpToBranch))

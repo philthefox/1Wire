@@ -42,6 +42,6 @@ int TempMeasureAll(void);
 /**
 * Gibt eine leere instanz des Roms wieder
 **/
-ROM getEmptyROM(void);
+ROM createROM(void);
 
 #endif /* HEADER_TEMPSENSOR_H_ */

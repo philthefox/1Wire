@@ -4,7 +4,7 @@
 .\objects\hardwarecontroller.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\hardwarecontroller.o: general.h
 .\objects\hardwarecontroller.o: hardwareController.h
+.\objects\hardwarecontroller.o: temperature.h
 .\objects\hardwarecontroller.o: hal.h
 .\objects\hardwarecontroller.o: errorHandling.h
 .\objects\hardwarecontroller.o: crc.h
-.\objects\hardwarecontroller.o: arrayList.h
