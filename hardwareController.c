@@ -8,7 +8,6 @@
 #include "hal.h"
 #include "errorHandling.h"
 #include "crc.h"
-//#include "arrayList.h"
 
 #define MAX_NUMBER_ROMS 10
 
@@ -53,20 +52,6 @@ int selectSlave(ROM slaveRom) {
 }
 
 /**
-* Führt den read cmd aus und schreibt den gemessenen wert in den ROM
-**/
-int readROM(ROM *readRom) {
-	int err = reset();
-	if (err) {
-		
-		return err;
-	}
-	writeByte(READ_ROM);
-	readByte(8, (BYTE *) readRom);
-	return 0;
-}
-
-/**
 * Messung durchfuehren
 **/
 int measure() {
@@ -85,19 +70,19 @@ int measure() {
 	return 0;
 }
 /**
-* Führt den Skip rom cmd aus
+* Ausführung des skip roms
 **/
 int skipRom() {
-	int err = reset();
-	if (err) {
-		return err;
+	int e = reset();
+	if (e != EOK) {
+		return e;
 	}
 	writeByte(SKIP_ROM);
-	return 0;
+	return EOK;
 }
 
 /**
-* Liest das Scratchpad aus
+* Auslesen des Scratch Pads
 **/
 int readScratch(ScratchPad *SpadOut) {
 	
@@ -114,9 +99,6 @@ int readScratch(ScratchPad *SpadOut) {
 	}
 }
 
-/**
-* Erkennt alle angeschlossenen Sensoren und schreibt die erkannten in die Liste 
-**/
 int detectSensors(int size, ROM romList[size], int *numberOfElements) {
 	initRomList();
 	resetHardware();

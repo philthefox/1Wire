@@ -14,9 +14,6 @@ void initTemperature(void){
 	initHardwareController();
 }
 
-/**
-* Erstellen eines leeren Sensors
-**/
 Sensor createSensor(ROM rom){
 	Sensor sensor;
 	sensor.rom = rom;
@@ -24,9 +21,6 @@ Sensor createSensor(ROM rom){
 	return sensor;
 }
 
-/**
-* Erkennt automatisch alle angeschlossenen Sensoren und deren Rom codes, und die Liste mit diesen
-**/
 int detectAllSensors(int arraySize, Sensor sensorList[arraySize], int *anzahlS){
 	ROM romList[arraySize];
 	int elementCounter = 0;
@@ -47,23 +41,6 @@ int detectAllSensors(int arraySize, Sensor sensorList[arraySize], int *anzahlS){
 	return 0;
 }
 
-/**
-* Führt eine Temperturmessung auf dem Angegebenen Sensor aus, und schreibt die Temperatur in den Sensor
-**/
-//int TempMeasure(Sensor *sensor){
-//	int err = selectSlave(sensor->ROMCode);
-//	if(err){return err;}
-//
-//	measure();
-//	
-//	err = TempReadTemp(sensor);
-//	if(err){return err;}
-//	return 0;
-//}
-
-/**
-* Erstellen eines leeren ROMs
-**/
 ROM createROM(void){
 	ROM rom;
 	rom.crc = 0;
@@ -74,35 +51,32 @@ ROM createROM(void){
 	return rom;
 }
 
-/**
-* Lässt alle Sensoren gleichzeitig eine Messung durchführen
-**/
 int measureAllTemperatures(void){
-	int err = resetHardware();
-	if(err) {
-		return err;
+	int e = resetHardware();
+	if(e != EOK) {
+		return e;
 	}
 	skipRom();
 	measure();
-	return 0;
+	return EOK;
 }
 
-/**
-* Liest die Temperatur des Angegebenen Scratchpads und schreibt den Wert in den Sensor
-**/
 int readTemperatureFromScratchpad(Sensor *sensor){		
-	int readError = 0;
+	int readError = EOK;
 	int retry = 0;	
 	int numberOfTries = 3;
 	ScratchPad sPad;
 	
 	do{
-		int err = resetHardware();
-		if(err){return err;}
+		int e = resetHardware();
+		if (e != EOK) {
+			return e;
+		}
 
-		err = selectSlave(sensor->rom);
-		if(err){return err;}
-		
+		e = selectSlave(sensor->rom);
+		if (e != EOK) {
+			return e;
+		}
 
 		readError = readScratch(&sPad);
 		if (readError == INVALIDCRC) {
@@ -111,38 +85,32 @@ int readTemperatureFromScratchpad(Sensor *sensor){
 		}
 	} while (retry == 1 && numberOfTries >= 0);
 	
-	if (readError) {
+	if (readError != EOK) {
 		return readError;
 	}
 
 	double temp = temperatureToDouble(sPad.temperature);
 	sensor->temperature = temp;
 	
-	return 0;
+	return EOK;
 }
 
-
-/**
-* Wandelt die gemessene Temperatur aus dem Scratchpad in einen Double um
-**/
 static double temperatureToDouble(WORD temp){
     float f = 0;
 
     int16_t input = temp;
     int komma = input & 0x0F;
 
-    //Komma nibble rausschieben
+    // Bits rechts des Kommas entfernen
     input = input >> 4;
 
-    for(int i = 0; i< 4;i++){
-        if(komma & (0x08 >> i)){
-        // für jede 1, 2^-(1+stelle)
-        f = f + pow(2,-(i+1));
+    for (int i = 0; i < 4; i++) {
+        if (komma & (0x08 >> i)) {
+			// für jede 1, 2^-(1+stelle)
+			f = f + pow(2,-(i+1));
         }
     }
 
     return f+input;
-
-
 }
 

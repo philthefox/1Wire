@@ -6,7 +6,7 @@
 #include "general.h"
 
 void initTemperatureOutput(void);
-void printTemperatures(Sensor sensor, int nr);
-void printROMs(Sensor sensor, int nr);
+void printTemperature(Sensor sensor, int nr);
+void printROMs(int * anzahlS, int maxSensors, Sensor sensorList[maxSensors]);
 
 #endif /* HEADER_OUTPUT_H_ */

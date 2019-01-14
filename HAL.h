@@ -2,7 +2,6 @@
 #ifndef HEADER_HAL_H_
 #define HEADER_HAL_H_
 
-
 #include <stdint.h>
 #include "general.h"
 

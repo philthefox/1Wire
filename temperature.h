@@ -10,8 +10,6 @@ Sensor createSensor(ROM rom);
 
 int detectAllSensors(int arraySize, Sensor sensorList[arraySize], int *anzahlS);
 
-//int TempMeasure(Sensor *sensor);
-
 int readTemperatureFromScratchpad(Sensor *sensor);
 
 int measureAllTemperatures(void);

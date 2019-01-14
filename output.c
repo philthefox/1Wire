@@ -5,33 +5,44 @@
 #include "general.h"
 #include "temperature.h"
 
-#define TEMPYOFFSET 1
-#define TEMPXOFFSET 22
+static void printROM(Sensor sensor, int nr);
 
 /**
-* Initialisiert die Temperaturausgabe 
+* Initialisierung der Temperaturausgabe 
 **/
 void initTemperatureOutput(void) {
-	//TFT_set_font_color(GREEN);
-	TFT_gotoxy(TEMPXOFFSET,TEMPYOFFSET);
-	TFT_puts("Sensor Temps:");
+	TFT_gotoxy(22,1);
+	TFT_puts("Temperatures:");
 }
 
 /**
-* Gibt einen Temperatur wert an der richtigen stelle auf dem Display aus
+* Ausgabe der Temperatur eines Sensors
 **/ 
-void printTemperatures(Sensor sensor, int nr) {
+void printTemperature(Sensor sensor, int nr) {
 	char stringBuff[20];
-	//TFT_set_font_color(GREEN);
-	snprintf(stringBuff, 20, "%d: %.3f Grad C",nr, sensor.temperature);
-	TFT_gotoxy(TEMPXOFFSET,TEMPYOFFSET+nr);
+	snprintf(stringBuff, 20, "%.2f Grad C", sensor.temperature);
+	TFT_gotoxy(22,1+nr);
 	TFT_puts(stringBuff);
 }
 
 /**
-* Gibt den Rom Code des Sensor auf dem Display aus
+* Ausgabe der ROM Codes aller erkannten Sensoren
 **/
-void printROMs(Sensor sensor, int nr) {
+void printROMs(int *anzahlS, int maxSensors, Sensor sensorList[maxSensors]) {
+	TFT_cursor_off();
+	TFT_set_font_color(WHITE);
+	TFT_gotoxy(1,1);	
+	TFT_puts("Sensors: ");
+	
+	for(int i = 0; i < *anzahlS; i++){
+		printROM(sensorList[i], i+1);
+	}
+}
+
+/**
+* Ausgabe des ROM Codes eines Sensors
+**/
+static void printROM(Sensor sensor, int nr) {
 	char strBuff[100];
 	snprintf(strBuff, sizeof(strBuff), "\n\r%d: %llx", nr, *((unsigned long long *) &(sensor.rom)));
 	TFT_puts(strBuff);

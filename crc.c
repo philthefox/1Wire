@@ -1,19 +1,9 @@
-/*
- * CRC_calc.c
- *
- *  Created on: 25.11.2018
- *      Author: Linus
- */
-
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include "general.h"
 #include "crc.h"
-
-
-
 
 static unsigned short crc_table[256] ={
 		0, 94, 188, 226, 97, 63, 221, 131, 194, 156, 126, 32, 163, 253, 31, 65,
@@ -33,7 +23,6 @@ static unsigned short crc_table[256] ={
 		233, 183, 85, 11, 136, 214, 52, 106, 43, 117, 151, 201, 74, 20, 246, 168,
 		116, 42, 200, 150, 21, 75, 169, 247, 182, 232, 10, 84, 215, 137, 107, 53
 };
-
 
 int isValidCRC(int size, BYTE data[size]){
 	BYTE buff = 1;

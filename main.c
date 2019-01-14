@@ -8,80 +8,70 @@
 #include "errorHandling.h"
 #include "output.h"
 
-// ---------------- Functionen ---------------
-static void initROMList(int * anzahlS, int maxList, Sensor SensorList[maxList]);
+static void initROMList(int *anzahlS, int maxSensors, Sensor sensorList[maxSensors]);
 
 int main(void) {
 	
 	// Initialisierungen
 	Init_TI_Board();
 	initTemperature();
-	int maxList = 15;
+	int maxSensors = 15;
 	int anzahlS = 0;
-	Sensor SensorList[maxList];
-	initROMList(&anzahlS, maxList, SensorList);
+	Sensor sensorList[maxSensors];
+	initROMList(&anzahlS, maxSensors, sensorList);
 	initTemperatureOutput();
+	int e = EOK;
 	
 	while (1) { // super loop
 		
-		while(anzahlS == 0){			
-			initROMList(&anzahlS, maxList, SensorList);		
+		while (anzahlS == 0) {			
+			initROMList(&anzahlS, maxSensors, sensorList);		
 			initTemperatureOutput();
-			if(anzahlS != 0){
+			if (anzahlS != 0) {
 				TFT_cls();
 				initTemperatureOutput();
-				initROMList(&anzahlS, maxList, SensorList);	
+				initROMList(&anzahlS, maxSensors, sensorList);	
 			}
 		}
 		
 
 		// Durchfuehren der Temperaturmessungen (alle Sensoren gleichzeitig)
-		int err = measureAllTemperatures();
-		if(err) {
-			errorHandler(err);
+		e = measureAllTemperatures();
+		if(e != EOK) {
+			errorHandler(e);
 		}
 
 		for (int i = 0; i < anzahlS; i++) {
 			// Auslesen der Scratchpads
-			int err = readTemperatureFromScratchpad(&(SensorList[i]));			
-			if (err) {
-				// Im Fehlerfall liste zurücksetzen und Roms erneut detecten
-				errorHandler(err);
+			e = readTemperatureFromScratchpad(&(sensorList[i]));			
+			if (e != EOK) {
+				errorHandler(e);
 				TFT_cls();
-				initROMList(&anzahlS, maxList, SensorList);
+				initROMList(&anzahlS, maxSensors, sensorList);
 				initTemperatureOutput();
 				break;
 			}			
 			
 			// Ausgabe der gemessenen Temperaturen
-			printTemperatures(SensorList[i], i+1);
+			printTemperature(sensorList[i], i+1);
 		}	
 	}
 }
 
-/**
-* Initialisiert eine neue RomListe, und führt autodetect der Sensoren durch
-**/
-static void initROMList(int * anzahlS, int maxList, Sensor SensorList[maxList]) {
+static void initROMList(int *anzahlS, int maxSensors, Sensor sensorList[maxSensors]) {
+	int e = EOK;
 	// Init List;	
 	*anzahlS = 0;
-	for (int i = 0; i < maxList; i++) {		
-		SensorList[i] = createSensor(createROM());
+	for (int i = 0; i < maxSensors; i++) {		
+		sensorList[i] = createSensor(createROM());
 	}
 
-	int err = detectAllSensors(maxList, SensorList, anzahlS);
-	if(err) {
-		errorHandler(err);
+	e = detectAllSensors(maxSensors, sensorList, anzahlS);
+	if (e != EOK) {
+		errorHandler(e);
 	}
 
-	TFT_cursor_off();
-	TFT_set_font_color(WHITE);
-	TFT_gotoxy(1,1);	
-	TFT_puts("ROMs: ");
-	
-	for(int i = 0; i < *anzahlS; i++){
-		printROMs(SensorList[i], i+1);
-	}
+	printROMs(anzahlS, maxSensors, sensorList);
 }
 
 

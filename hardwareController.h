@@ -14,8 +14,6 @@ void initHardwareController(void);
 
 int resetHardware(void);
 
-int readROM(ROM *readRom);
-
 int measure(void);
 
 int detectSensors(int size, ROM romList[size], int *numberOfElements);
